@@ -63,9 +63,9 @@ class MoviesController < ApplicationController
 
     if the_movie.valid?
       the_movie.save
-      redirect_to("/movies/#{the_movie.id}", { notice: "Movie updated successfully." })
+      redirect_to("movie_url(#{the_movie.id})", { notice: "Movie updated successfully." })
     else
-      redirect_to("/movies/#{the_movie.id}", { alert: "Movie failed to update successfully." })
+      redirect_to("movie_url(#{the_movie.id})", { alert: "Movie failed to update successfully." })
     end
   end
 
