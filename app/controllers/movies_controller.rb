@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
       @the_movie.save
       redirect_to movies_url, notice: "Movie was successfully created." 
     else
-      render template: "movies/new"
+      render "new"
     end
   end
 
